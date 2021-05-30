@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: caterer-service
+  namespace: hunza-assignment
+spec:
+  selector:
+      matchLabels:
+        app: caterer-service
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: caterer-service
+    spec:
+      containers:
+        - name: caterer-service
+          image: ishaansolanki6/caterer-service:latest
+          imagePullPolicy: Always
+          ports:
+          - containerPort: 8088
+          env:
+            - name: MONGO_DB
+              valueFrom:
+                configMapKeyRef:
+                  name: caterer-db-config  
+                  key: database
+            - name: MONGO_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: caterer-db-config 
+                  key: host
+            - name: PAGESIZE
+              value: "5"      

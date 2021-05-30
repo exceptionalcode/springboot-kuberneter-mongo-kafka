@@ -1,0 +1,44 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: catererdb
+  name: catererdb-service
+  namespace: hunza-assignment
+spec:
+  ports:
+  - port: 27017
+    targetPort: 27017
+  selector:
+    app: catererdb
+  clusterIP: None
+    
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: catererdb
+  namespace: hunza-assignment
+  labels:
+    app: catererdb
+spec:
+  selector: 
+    matchLabels:
+      app: catererdb
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: catererdb
+      name: catererdb-service
+      namespace: hunza-assignment
+
+      
+    spec:
+      containers:
+      - image: mongo:latest
+        name: catererdb     
+                
+        ports:
+        - containerPort: 27017
+          name: catererdb   

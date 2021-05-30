@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: caterer-service
+  namespace: hunza-assignment
+spec:
+  selector:
+    app: caterer-service
+  ports:
+  - protocol: TCP
+    port: 8088
+    nodePort: 30081
+  type: NodePort
