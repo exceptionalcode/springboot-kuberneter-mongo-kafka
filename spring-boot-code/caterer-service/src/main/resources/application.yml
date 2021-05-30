@@ -1,0 +1,36 @@
+#server running on port 8088
+server:
+  port: 8088
+
+spring:
+  application:
+    name: caterer-app
+  data:
+    mongodb:
+      database: ${MONGO_DB:hunza} #pull mongo database detail from env var in kubernetes
+      host: ${MONGO_HOST:localhost} #pull mongo host detail from env var in kubernetes
+      port: 27017
+
+#spring kafka configuration details for consumer
+  kafka:
+    consumer:
+      bootstrap-servers: my-cluster-kafka-bootstrap:9092
+      group-id: hunza-group-id
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+
+#spring kafka configuration details for produces
+    producer:
+      bootstrap-servers: my-cluster-kafka-bootstrap:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+
+caterer:
+  pagesize: ${PAGESIZE:10} #pull page size for pagination response in service from env var in kubernetes
+
+
+logging:
+  level:
+    org.springframework.data.mongodb.core.MongoTemplate: DEBUG
