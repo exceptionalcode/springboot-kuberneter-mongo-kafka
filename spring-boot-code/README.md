@@ -25,6 +25,7 @@ Yml(application properties), MongoDB, Springboot-kafka
 Access URL: http:localhost:8088/swagger-ui/ (Standalone spring boot)
 
 ### Key features
+* HATEOS for API linkage, RESTful interaction is driven by hypermedia.
 * Testing: Functional unit tests. Also integration tests for (Data persistence
 layer, and rest api layer etc.) Usage of Mockito and Spring Boot Test and Mock MVC.
 * REST API consumes/produces json data, Document the swagger api model and
