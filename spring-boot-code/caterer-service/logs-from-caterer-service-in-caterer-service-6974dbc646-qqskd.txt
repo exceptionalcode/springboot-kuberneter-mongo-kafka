@@ -1,0 +1,212 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.5.0)
+
+2021-06-01 00:24:29.609  INFO 1 --- [           main] c.h.e.caterer.CatererServiceApplication  : Starting CatererServiceApplication v0.0.1-SNAPSHOT using Java 1.8.0_212 on caterer-service-6974dbc646-qqskd with PID 1 (/caterer-service.jar started by root in /)
+2021-06-01 00:24:29.613  INFO 1 --- [           main] c.h.e.caterer.CatererServiceApplication  : No active profile set, falling back to default profiles: default
+2021-06-01 00:24:37.208  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2021-06-01 00:24:40.303  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3079 ms. Found 1 MongoDB repository interfaces.
+2021-06-01 00:24:49.551  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2021-06-01 00:24:49.884  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-06-01 00:24:49.885  INFO 1 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-06-01 00:24:51.134  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-06-01 00:24:51.135  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 21327 ms
+2021-06-01 00:24:54.961  WARN 1 --- [           main] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2021-06-01 00:25:01.606  INFO 1 --- [           main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[catererdb-service:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2021-06-01 00:25:06.674  INFO 1 --- [b-service:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:4}] to catererdb-service:27017
+2021-06-01 00:25:06.674  INFO 1 --- [b-service:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:3}] to catererdb-service:27017
+2021-06-01 00:25:06.690  INFO 1 --- [b-service:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=catererdb-service:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=9, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1253264500}
+2021-06-01 00:25:24.774  INFO 1 --- [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [my-cluster-kafka-bootstrap:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-hunza-group-id-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = hunza-group-id
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 127000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2021-06-01 00:25:27.031  INFO 1 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 2.7.1
+2021-06-01 00:25:27.035  INFO 1 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 61dbce85d0d41457
+2021-06-01 00:25:27.036  INFO 1 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1622507127025
+2021-06-01 00:25:27.043  INFO 1 --- [           main] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-hunza-group-id-1, groupId=hunza-group-id] Subscribed to topic(s): caterer_topic
+2021-06-01 00:25:27.333  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2021-06-01 00:25:29.335  WARN 1 --- [           main] d.s.r.o.OperationImplicitParameterReader : Unable to interpret the implicit parameter configuration with dataType: String, dataTypeClass: class java.lang.Void
+2021-06-01 00:25:29.342  WARN 1 --- [           main] d.s.r.o.OperationImplicitParameterReader : Unable to interpret the implicit parameter configuration with dataType: Integer, dataTypeClass: class java.lang.Void
+2021-06-01 00:25:29.495  INFO 1 --- [           main] c.h.e.caterer.CatererServiceApplication  : Started CatererServiceApplication in 62.026 seconds (JVM running for 68.573)
+2021-06-01 00:25:29.498  INFO 1 --- [           main] o.s.b.a.ApplicationAvailabilityBean      : Application availability state LivenessState changed to CORRECT
+2021-06-01 00:25:29.503  INFO 1 --- [           main] o.s.b.a.ApplicationAvailabilityBean      : Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+2021-06-01 00:25:30.106  INFO 1 --- [ntainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-hunza-group-id-1, groupId=hunza-group-id] Cluster ID: hKyuZUftTYuoC0QhVO6GDg
+2021-06-01 00:25:30.109  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-hunza-group-id-1, groupId=hunza-group-id] Discovered group coordinator my-cluster-kafka-0.my-cluster-kafka-brokers.hunza-assignment.svc:9092 (id: 2147483647 rack: null)
+2021-06-01 00:25:30.117  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-hunza-group-id-1, groupId=hunza-group-id] (Re-)joining group
+2021-06-01 00:25:30.146  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-hunza-group-id-1, groupId=hunza-group-id] (Re-)joining group
+2021-06-01 00:25:33.179  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-hunza-group-id-1, groupId=hunza-group-id] Successfully joined group with generation Generation{generationId=4, memberId='consumer-hunza-group-id-1-b273e4c2-78f9-403f-bfa1-843d424ce578', protocol='range'}
+2021-06-01 00:25:33.193  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-hunza-group-id-1, groupId=hunza-group-id] Finished assignment for group at generation 4: {consumer-hunza-group-id-1-b273e4c2-78f9-403f-bfa1-843d424ce578=Assignment(partitions=[caterer_topic-0])}
+2021-06-01 00:25:33.220  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-hunza-group-id-1, groupId=hunza-group-id] Successfully synced group in generation Generation{generationId=4, memberId='consumer-hunza-group-id-1-b273e4c2-78f9-403f-bfa1-843d424ce578', protocol='range'}
+2021-06-01 00:25:33.221  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-hunza-group-id-1, groupId=hunza-group-id] Notifying assignor about the new Assignment(partitions=[caterer_topic-0])
+2021-06-01 00:25:33.231  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-hunza-group-id-1, groupId=hunza-group-id] Adding newly assigned partitions: caterer_topic-0
+2021-06-01 00:25:33.260  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-hunza-group-id-1, groupId=hunza-group-id] Setting offset for partition caterer_topic-0 to the committed offset FetchPosition{offset=2, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[my-cluster-kafka-0.my-cluster-kafka-brokers.hunza-assignment.svc:9092 (id: 0 rack: null)], epoch=0}}
+2021-06-01 00:25:33.262  INFO 1 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : hunza-group-id: partitions assigned: [caterer_topic-0]
+2021-06-01 00:25:48.082  INFO 1 --- [nio-8088-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-01 00:25:48.082  INFO 1 --- [nio-8088-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-06-01 00:25:48.085  INFO 1 --- [nio-8088-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2021-06-01 00:25:48.949  INFO 1 --- [nio-8088-exec-2] c.h.e.c.validator.CatererValidator       : Minimum guests are lesser then maximum guest.
+2021-06-01 00:25:48.981  INFO 1 --- [nio-8088-exec-2] c.h.e.caterer.service.CatererService     : Add caterer in DB with object with payload Caterer(id=null, name=rahul_catlina, location=Location(cityName=Indore, streetNameNumber=b, postalCode=azxc), capacity=Capacity(minGuest=1, maxGuest=2), contactInfo=ContactInfo(phoneNumber=88888, mobileNumber=+91-7869265829, emailAddress=rahul.sola@yaa.com))
+2021-06-01 00:25:49.478 DEBUG 1 --- [nio-8088-exec-2] o.s.data.mongodb.core.MongoTemplate      : find using query: { "name" : "rahul_catlina"} fields: Document{{}} for class: class com.hunza.event.caterer.model.Caterer in collection: caterer
+2021-06-01 00:25:50.172  INFO 1 --- [nio-8088-exec-2] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:5}] to catererdb-service:27017
+2021-06-01 00:25:50.273 DEBUG 1 --- [nio-8088-exec-2] o.s.data.mongodb.core.MongoTemplate      : findAndModify using query: { "_id" : "carter_sequence"} fields: Document{{}} sort: null for class: class com.hunza.event.caterer.model.DbSequence and update: { "$inc" : { "seq" : 1}} in collection: db_sequence
+2021-06-01 00:25:51.345 DEBUG 1 --- [nio-8088-exec-2] o.s.data.mongodb.core.MongoTemplate      : Saving Document containing fields: [_id, name, location, capacity, contactInfo, _class]
+2021-06-01 00:25:52.204  INFO 1 --- [nio-8088-exec-2] c.h.e.c.service.KafkaProducerService     : produce message to kafka topic!!
+2021-06-01 00:25:52.276  INFO 1 --- [nio-8088-exec-2] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	bootstrap.servers = [my-cluster-kafka-bootstrap:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = false
+	interceptor.classes = []
+	internal.auto.downgrade.txn.commit = true
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 127000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2021-06-01 00:25:52.348  INFO 1 --- [nio-8088-exec-2] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 2.7.1
+2021-06-01 00:25:52.349  INFO 1 --- [nio-8088-exec-2] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 61dbce85d0d41457
+2021-06-01 00:25:52.349  INFO 1 --- [nio-8088-exec-2] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1622507152348
+2021-06-01 00:25:52.366  INFO 1 --- [ad | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: hKyuZUftTYuoC0QhVO6GDg
+2021-06-01 00:25:52.428  INFO 1 --- [nio-8088-exec-2] c.h.e.c.r.CatererRestController          : Added caterer in db with response Caterer(id=1, name=rahul_catlina, location=Location(cityName=Indore, streetNameNumber=b, postalCode=azxc), capacity=Capacity(minGuest=1, maxGuest=2), contactInfo=ContactInfo(phoneNumber=88888, mobileNumber=+91-7869265829, emailAddress=rahul.sola@yaa.com)) 
+2021-06-01 00:25:52.561  INFO 1 --- [ntainer#0-0-C-1] c.h.e.c.service.KafkaConsumerService     : ###Consumer: Caterer with name add -> rahul_catlina

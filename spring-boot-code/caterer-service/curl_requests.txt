@@ -1,0 +1,28 @@
+curl --location --request POST 'localhost:30081/api/caterer' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "name": "rahul_catlina",
+    "location": {
+        "cityName": "Indore",
+        "streetNameNumber": "b",
+        "postalCode": "azxc"
+    },
+    "capacity": {
+        "minGuest": 1,
+        "maxGuest": 2
+    },
+    "contactInfo": {
+        "phoneNumber": "88888",
+        "mobileNumber": "+91-7869265829",
+        "emailAddress": "rahul.sola@yaa.com"
+    }
+}'
+
+
+curl --location --request GET 'localhost:30081/api/caterer/all'
+
+curl --location --request GET 'localhost:30081/api/caterer/getDetailsByName/ishaan_catlina'
+
+curl --location --request GET 'localhost:30081/api/caterer/getDetailsById/1'
+
+curl --location --request POST 'localhost:30081/api/caterer/evictCache'
