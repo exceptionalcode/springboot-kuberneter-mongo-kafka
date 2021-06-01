@@ -21,7 +21,7 @@ Installed: [Docker](https://www.docker.com/), [Java 11](https://www.oracle.com/t
 For Kubernetes you can use simple [Docker for Desktop](https://www.docker.com/products/docker-desktop) in local machine , here you can enable Kubernetes service.
   
   ### Usage
-* Clone [springboot-kubernetes-starterkit](https://github.com/exceptionalcode/springboot-kuberneter-mongo-kafka.git)
+* Clone [springboot-kuberneter-mongo-kafka](https://github.com/exceptionalcode/springboot-kuberneter-mongo-kafka.git)
 * Download and Start Docker and Kubernetes services
 * Build Maven project with using command: mvn clean install
 * Build Docker images for each module using command, for example: docker build -t ishaansolanki6/caterer-service:0.0.1 .
