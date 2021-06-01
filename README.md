@@ -3,7 +3,7 @@
   <br>
   <a><img src="images/springbootpluskubernetes.png" width="900" height="250" a>
   <br>
- Application is Hunza Cunsulting Assignment with two Tier Springboot application with Mongo and Kafka deploy on Kubernetes ecosystem.(Production Ready)
+ Application is Hunza Cunsulting Assignment with two Tier Springboot<b>(Production Ready)</b> application with Mongo and Kafka deploy on Kubernetes ecosystem.
   <br>
 </h1>
   
